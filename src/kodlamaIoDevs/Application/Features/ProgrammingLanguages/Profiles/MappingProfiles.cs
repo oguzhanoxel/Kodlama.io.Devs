@@ -21,7 +21,6 @@ namespace Application.Features.ProgrammingLanguages.Profiles
 			CreateMap<ProgrammingLanguage, CreateProgrammingLanguageCommand>().ReverseMap(); 
 
 			CreateMap<ProgrammingLanguage, DeletedProgrammingLanguageDto>().ReverseMap();
-			CreateMap<ProgrammingLanguage, DeleteProgrammingLanguageCommand>().ReverseMap();
 
 			CreateMap<ProgrammingLanguage, UpdatedProgrammingLanguageDto>().ReverseMap();
 			CreateMap<ProgrammingLanguage, UpdateProgrammingLanguageCommand>().ReverseMap();
