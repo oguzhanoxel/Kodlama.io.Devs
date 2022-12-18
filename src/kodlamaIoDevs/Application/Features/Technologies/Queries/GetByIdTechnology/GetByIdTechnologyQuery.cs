@@ -3,6 +3,7 @@ using Application.Services.Repositories;
 using AutoMapper;
 using Domain.Entities;
 using MediatR;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,7 +29,7 @@ namespace Application.Features.Technologies.Queries.GetByIdTechnology
 
 			public async Task<TechnologyGetByIdDto> Handle(GetByIdTechnologyQuery request, CancellationToken cancellationToken)
 			{
-				Technology technology = await _technologyRepository.GetAsync(t => t.Id == request.Id);
+				Technology technology = await _technologyRepository.GetAsync(t => t.Id == request.Id, include:t => t.Include(p => p.ProgrammingLanguage));
 				TechnologyGetByIdDto technologyGetByIdDto = _mapper.Map<TechnologyGetByIdDto>(technology);
 				return technologyGetByIdDto;
 			}
