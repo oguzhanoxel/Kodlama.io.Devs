@@ -15,6 +15,7 @@ namespace Persistence.Contexts
 		protected IConfiguration Configuration { get; set; }
 		public DbSet<ProgrammingLanguage> ProgrammingLanguages { get; set; }
 		public DbSet<Technology> Technologies { get; set; }
+		public DbSet<Profile> Profiles { get; set; }
 		public DbSet<User> Users { get; set; }
 		public DbSet<OperationClaim> OperationClaims { get; set; }
 		public DbSet<UserOperationClaim> UserOperationClaims { get; set; }
@@ -50,6 +51,15 @@ namespace Persistence.Contexts
 				a.Property(p => p.Name).HasColumnName("Name");
 
 				a.HasOne(p => p.ProgrammingLanguage);
+			});
+
+			modelBuilder.Entity<Profile>(a =>
+			{
+				a.ToTable("Profiles").HasKey(k => k.Id);
+				a.Property(p => p.Id).HasColumnName("Id");
+				a.Property(p => p.Github).HasColumnName("Github");
+
+				a.HasOne(p => p.User);
 			});
 
 			modelBuilder.Entity<User>(a =>

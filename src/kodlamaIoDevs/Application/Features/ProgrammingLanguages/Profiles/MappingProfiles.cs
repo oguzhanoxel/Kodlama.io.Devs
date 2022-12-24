@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace Application.Features.ProgrammingLanguages.Profiles
 {
-	public class MappingProfiles : Profile
+	public class MappingProfiles : AutoMapper.Profile
 	{
 		public MappingProfiles()
 		{
