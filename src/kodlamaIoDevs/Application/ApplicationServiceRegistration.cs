@@ -1,9 +1,13 @@
 ﻿using Application.Features.Auths.Rules;
+using Application.Features.OperationClaims.Rules;
+using Application.Features.Profiles.Rules;
 using Application.Features.ProgrammingLanguages.Rules;
 using Application.Features.Technologies.Rules;
+using Application.Features.UserOperationClaims.Rules;
 using Application.Services.AuthService;
 using Core.Application.Pipelines.Authorization;
 using Core.Application.Pipelines.Validation;
+using Core.Security.Entities;
 using FluentValidation;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
@@ -27,6 +31,8 @@ namespace Application
 			services.AddScoped<ProgrammingLanguageBusinessRules>();
 			services.AddScoped<TechnologyBusinessRules>();
 			services.AddScoped<ProfileBusinessRules>();
+			services.AddScoped<OperationClaimBusinessRules>();
+			services.AddScoped<UserOperationClaimBusinessRules>();
 			services.AddScoped<AuthBusinessRules>();
 
 			services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());

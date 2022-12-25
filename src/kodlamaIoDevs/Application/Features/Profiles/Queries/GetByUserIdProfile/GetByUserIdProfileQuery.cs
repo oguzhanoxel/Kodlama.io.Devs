@@ -1,5 +1,5 @@
 ﻿using Application.Features.Profiles.Dtos;
-using Application.Features.Technologies.Rules;
+using Application.Features.Profiles.Rules;
 using Application.Services.Repositories;
 using ProfileEntity = Domain.Entities.Profile;
 using AutoMapper;

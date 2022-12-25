@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Application.Features.Technologies.Rules;
+using Application.Features.Profiles.Rules;
 
 namespace Application.Features.Profiles.Commands.CreateProfile
 {

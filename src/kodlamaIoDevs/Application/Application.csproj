@@ -20,8 +20,6 @@
 
 	<ItemGroup>
 	  <Folder Include="Features\Auths\Rules\" />
-	  <Folder Include="Features\OperationClaims\Commands\" />
-	  <Folder Include="Features\UserOperationClaims\" />
 	</ItemGroup>
 
 </Project>

@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Application.Features.Technologies.Rules
+namespace Application.Features.Profiles.Rules
 {
 	public class ProfileBusinessRules
 	{
